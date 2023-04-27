@@ -16,11 +16,7 @@ class DepartmentDropdown extends React.Component {
 
     getDepartments() {
         let departments = this.props.departments.map((department) => {
-            if(department.private*1) {
-                return {content: <span>{department.name} <Icon name='user-secret'/></span>};
-            } else {
-                return {content: department.name};
-            }
+            return {content: department.name};
         });
 
         return departments;

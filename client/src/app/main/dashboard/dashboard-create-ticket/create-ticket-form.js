@@ -49,7 +49,7 @@ class CreateTicketForm extends React.Component {
     };
 
     render() {
-        const { userLogged, isDefaultDepartmentLocked, isStaff, onlyOneSupportedLanguage, allowAttachments } = this.props;
+        const { userLogged, isDefaultDepartmentLocked, isStaff, onlyOneSupportedLanguage, allowAttachments, userDepartments } = this.props;
 
         return (
             <div className="create-ticket-form">
@@ -60,16 +60,10 @@ class CreateTicketForm extends React.Component {
                     <div className="row">
                         {!(isDefaultDepartmentLocked*1) || isStaff ?
                             <FormField className="col-md-5" label={i18n('DEPARTMENT')} name="departmentIndex" field="select" decorator={DepartmentDropdown} fieldProps={{
-                                departments: SessionStore.getDepartments(),
+                                departments: userDepartments,
                                 size: 'medium'
                             }} /> : null
                         }    
-                        {!onlyOneSupportedLanguage ?
-                            <FormField className="col-md-5" label={i18n('LANGUAGE')} name="language" field="select" decorator={LanguageSelector} fieldProps={{
-                                type: 'supported',
-                                size: 'medium'
-                            }} /> : null
-                        }
                     </div>
                     <FormField
                         label={i18n('CONTENT')}
@@ -228,6 +222,7 @@ export default connect((store) => {
         onlyOneSupportedLanguage: supportedLanguages.length == 1 ? true : false,
         isDefaultDepartmentLocked: store.config['default-is-locked'],
         allowAttachments: store.config['allow-attachments'],
-        defaultDepartmentId: store.config['default-department-id']
+        defaultDepartmentId: store.config['default-department-id'],
+        userDepartments: store.session.userDepartments,
     };
 })(CreateTicketForm);

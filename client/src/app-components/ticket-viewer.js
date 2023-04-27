@@ -455,12 +455,6 @@ class TicketViewer extends React.Component {
             <div className="ticket-viewer__response">
                 <Form {...this.getCommentFormProps()}>
                     <div className="ticket-viewer__response-title row">{i18n('RESPOND')}</div>
-                    <div className="row">
-                        <div className="ticket-viewer__response-actions">
-                            {this.renderCustomResponses()}
-                            {this.renderPrivate()}
-                        </div>
-                    </div>
                     <div className="ticket-viewer__response-field row">
                         <FormField name="content" validation="TEXT_AREA" required field="textarea" fieldProps={{allowImages: allowAttachments}} />
                         <div className="ticket-viewer__response-container">

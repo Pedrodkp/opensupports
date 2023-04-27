@@ -143,9 +143,6 @@ class TicketQueryFilters extends React.Component {
     renderDepartmentOption(department) {
         return (
             <div className="ticket-query-filters__department-option" key={`department-option-${department.id}`}>
-                {department.private*1 ?
-                    <Icon className="ticket-query-filters__department-option__icon" name='user-secret'/> :
-                    null}
                 <span className="ticket-query-filters__department-option__name">{department.name}</span>
             </div>
         );
@@ -154,9 +151,6 @@ class TicketQueryFilters extends React.Component {
     renderDeparmentSelected(department) {
         return (
             <div className="ticket-query-filters__department-selected" key={`department-selected-${department.id}`}>
-                {department.private*1 ?
-                    <Icon className="ticket-query-filters__department-selected__icon" name='user-secret'/> :
-                    null}
                 <span className="ticket-query-filters__department-selected__name">{department.name}</span>
             </div>
         );

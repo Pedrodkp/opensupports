@@ -66,7 +66,7 @@ import InstallCompleted from 'app/install/install-completed';
 export default (
     <Router history={history}>
         <Route component={App}>
-            <Route path='/' component={MainLayout}>
+            <Route path='/' component={AdminLoginPage}>
                 <IndexRoute component={MainHomePage} />
                 <Route path='signup' component={MainSignUpPage}/>
                 <Route path='verify-token/:email/:token' component={MainVerifyTokenPage}/>

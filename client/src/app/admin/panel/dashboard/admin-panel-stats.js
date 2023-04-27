@@ -141,7 +141,6 @@ class AdminPanelStats extends React.Component {
         const renderDepartmentItem = (department, style) => {
             return (
                 <div className={`admin-panel-stats__department-${style}`} key={`department-${style}-${department.id}`}>
-                    {department.private*1 ? <Icon className={`admin-panel-stats__department-${style}__icon`} name='user-secret' /> : null}
                     <span className={`admin-panel-stats__department-${style}__name`}>{department.name}</span>
                 </div>
             );

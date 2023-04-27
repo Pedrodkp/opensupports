@@ -146,6 +146,7 @@ class AdminPanelMenu extends React.Component {
                     }
                 ])
             },
+            
             {
                 groupName: i18n('TICKETS'),
                 path: '/admin/panel/tickets',
@@ -167,50 +168,10 @@ class AdminPanelMenu extends React.Component {
                         path: `/admin/panel/tickets/search-tickets?page=${INITIAL_PAGE}&useInitialValues=true`,
                         level: 1,
                     },
-                    {
-                        name: i18n('CUSTOM_RESPONSES'),
-                        path: '/admin/panel/tickets/custom-responses',
-                        level: 2
-                    },
                     ...customLists
                 ])
             },
-            {
-                groupName: i18n('USERS'),
-                path: '/admin/panel/users',
-                icon: 'user',
-                level: 4,
-                items: this.getItemsByFilteredByLevel([
-                    {
-                        name: i18n('LIST_USERS'),
-                        path: '/admin/panel/users/list-users',
-                        level: 4
-                    },
-                    {
-                        name: i18n('BAN_USERS'),
-                        path: '/admin/panel/users/ban-users',
-                        level: 4
-                    },
-                    {
-                        name: i18n('CUSTOM_FIELDS'),
-                        path: '/admin/panel/users/custom-fields',
-                        level: 4
-                    }
-                ])
-            },
-            {
-                groupName: i18n('ARTICLES'),
-                path: '/admin/panel/articles',
-                icon: 'book',
-                level: 4,
-                items: this.getItemsByFilteredByLevel([
-                    {
-                        name: i18n('LIST_ARTICLES'),
-                        path: '/admin/panel/articles/list-articles',
-                        level: 4
-                    }
-                ])
-            },
+
             {
                 groupName: i18n('STAFF'),
                 path: '/admin/panel/staff',

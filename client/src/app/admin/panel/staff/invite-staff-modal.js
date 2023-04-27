@@ -66,11 +66,7 @@ class InviteStaffModal extends React.Component {
 
     getDepartments() {
         return SessionStore.getDepartments().map(department => {
-            if(department.private*1){
-                return <span>{department.name} <Icon name='user-secret'/> </span>
-            } else {
-                return department.name;
-            }
+            return department.name;
         });
     }
 

@@ -193,7 +193,6 @@ class AdminPanelDepartments extends React.Component {
                     content: (
                         <span>
                             {department.name}
-                            {department.private*1 ? <Icon className="admin-panel-departments__private-icon" name='user-secret' /> : null}
                             {department.id == defaultDepartmentId ? <spam className="admin-panel-departments__default-icon"> {i18n('DEFAULT')} </spam> : null}
                             {(!department.owners) ? (
                                 <span className="admin-panel-departments__warning">

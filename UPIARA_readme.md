@@ -11,7 +11,8 @@ Tentei seguir o guideline para desenvolver, mas o back não funciona e não quis
 Getting up and running FRONT-END (client folder)
 Update: sudo apt update
 Install nvm: https://github.com/nvm-sh/nvm
-Use node version 11.15.0: nvm install 11 followed by nvm use 11
+Use node version 11.15.0: nvm install 11 
+Followed by: nvm use 11
 Go to client: cd opensupports/client
 Install dependencies: npm install
 Create build: npm run build

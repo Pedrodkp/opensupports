@@ -54,7 +54,6 @@ class TopicViewer extends React.Component {
                     <span className="topic-viewer__title">{this.props.name}</span>
                     {(this.props.editable) ? this.renderEditButton() : null}
                     {(this.props.editable) ? this.renderDeleteButton() : null}
-                    {this.props.private*1 ? <Icon className="topic-viewer__private" name='user-secret' color='grey'/> : null}
 
                 </div>
                 <ul className="topic-viewer__list">
