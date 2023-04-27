@@ -6,6 +6,8 @@
     - Removido crud de usuários.
     - Removida rota de artigo.
     - Removido a opção de idioma e resposta customizada do ticket.
+    - Removida opção de equipe level 1 (novo cliente) alterar o dono do ticket.
+    - Traduzido melhor algumas mensagens.
 
 ## 26/abr/2023
  

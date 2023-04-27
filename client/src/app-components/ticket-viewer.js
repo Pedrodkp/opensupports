@@ -342,7 +342,7 @@ class TicketViewer extends React.Component {
     }
 
     renderOwnerNode() {
-        const { assignmentAllowed, ticket } = this.props;
+        const { assignmentAllowed, ticket, level } = this.props;
         const filtersOnlyWithOwner = ticket.owner && {owners: [ticket.owner.id*1]};
         let ownerNode = null;
 
@@ -360,7 +360,7 @@ class TicketViewer extends React.Component {
             );
         }
 
-        return (assignmentAllowed && this.state.editOwner) ? this.renderEditOwner() : ownerNode;
+        return (assignmentAllowed && this.state.editOwner && level > 1) ? this.renderEditOwner() : ownerNode;
     }
 
     renderEditOwner() {
@@ -896,6 +896,7 @@ export default connect((store) => {
         staffMembersLoaded: store.adminData.staffMembersLoaded,
         allowAttachments: store.config['allow-attachments'],
         userLevel: store.session.userLevel*1,
-        tags: store.config['tags'].map((tag) => {return {...tag, id: tag.id*1}})
+        tags: store.config['tags'].map((tag) => {return {...tag, id: tag.id*1}}),
+        level: store.session.userLevel
     };
 })(TicketViewer);
