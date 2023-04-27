@@ -1,5 +1,11 @@
 # Dev
 
+## Implementar
+
+ - Remover o suporte a multilanguage
+ - Corrigir erros no dashboard de idioma
+ - Ver problema que ao logar as vezes aparece muito rapido as opções de admin e staff
+
 ## Front
 
 Tentei seguir o guideline para desenvolver, mas o back não funciona e não quis perder tempo, apenas alterei o front e fiz o build direto com os steps abaixo e usei os volumes do container para alterar apenas o arquivo necessário.
