@@ -179,22 +179,22 @@ class AdminPanelMenu extends React.Component {
                 groupName: i18n('USERS'),
                 path: '/admin/panel/users',
                 icon: 'user',
-                level: 1,
+                level: 4,
                 items: this.getItemsByFilteredByLevel([
                     {
                         name: i18n('LIST_USERS'),
                         path: '/admin/panel/users/list-users',
-                        level: 1
+                        level: 4
                     },
                     {
                         name: i18n('BAN_USERS'),
                         path: '/admin/panel/users/ban-users',
-                        level: 1
+                        level: 4
                     },
                     {
                         name: i18n('CUSTOM_FIELDS'),
                         path: '/admin/panel/users/custom-fields',
-                        level: 1
+                        level: 4
                     }
                 ])
             },
@@ -202,12 +202,12 @@ class AdminPanelMenu extends React.Component {
                 groupName: i18n('ARTICLES'),
                 path: '/admin/panel/articles',
                 icon: 'book',
-                level: 2,
+                level: 4,
                 items: this.getItemsByFilteredByLevel([
                     {
                         name: i18n('LIST_ARTICLES'),
                         path: '/admin/panel/articles/list-articles',
-                        level: 2
+                        level: 4
                     }
                 ])
             },
